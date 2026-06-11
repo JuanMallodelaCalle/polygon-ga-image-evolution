@@ -2,7 +2,7 @@
 
 A curated portfolio version of a Bio-inspired Learning coursework project that evolves target images using a polygon-based Genetic Algorithm (GA).
 
-The system represents candidate images as layered semi-transparent polygons and iteratively improves them through selection, crossover and mutation. Fitness is driven by perceptual color difference in Lab color space using CIE76 ΔE*, while additional image-quality metrics such as MSE, PSNR, SSIM, LPIPS, FID and histogram distance are used for post-hoc analysis.
+The system represents candidate images as layered semi-transparent polygons and iteratively improves them through selection, crossover and mutation. Fitness is driven by perceptual color difference in Lab color space using CIE76 ΔE\*, while additional image-quality metrics such as MSE, PSNR, SSIM, LPIPS, FID and histogram distance are used for post-hoc analysis.
 
 ## Project Overview
 
@@ -33,7 +33,7 @@ flowchart LR
 
 - Polygon-based image representation with RGBA colors and 3-to-6-vertex primitives.
 - Population-based evolutionary process with selection, crossover and mutation.
-- CIE76 ΔE* fitness computed in Lab color space.
+- CIE76 ΔE\* fitness computed in Lab color space.
 - Post-hoc evaluation using MSE, PSNR, SSIM, LPIPS, FID and histogram distance.
 - Visual outputs such as evolutionary GIFs, generation snapshots, metric plots and perceptual difference heatmaps.
 - Modular Python notebook implementation for experimentation with custom target images.
@@ -49,7 +49,7 @@ The evolutionary loop follows the standard GA structure:
 5. Generate new candidates using crossover and mutation.
 6. Repeat across generations while logging the best candidate and evaluation metrics.
 
-The original implementation used CIE76 ΔE* as the optimization fitness:
+The original implementation used CIE76 ΔE\* as the optimization fitness:
 
 ```text
 F(candidate) = mean(ΔE*_{CIE76}(target, candidate))
@@ -66,7 +66,7 @@ The original coursework reported final metrics for two completed experiments: Ei
 | MSE | 862.33 | 1132.29 |
 | PSNR (dB) | 18.77 | 17.59 |
 | SSIM | 0.3433 | 0.6752 |
-| ΔE* (CIE76) | 13.40 | 17.80 |
+| ΔE\* (CIE76) | 13.40 | 17.80 |
 | Histogram distance | 7.97 | 13.28 |
 | LPIPS | 0.5954 | 0.2882 |
 | FID | 442.44 | 271.06 |
@@ -117,7 +117,18 @@ Create and activate an environment:
 
 ```bash
 python -m venv .venv
-.venv\Scripts\activate
+```
+
+On Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+On macOS/Linux:
+
+```bash
+source .venv/bin/activate
 ```
 
 Install dependencies:
