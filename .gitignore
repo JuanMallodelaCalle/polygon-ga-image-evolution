@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local target images and generated outputs
+target.png
+data/targets/*
+!data/targets/.gitkeep
+output/
+outputs/
+evolution*.gif
+data_cross.csv
+snapshot_gen_*.png
+crossover_alpha_parent*.png
+crossover_alpha_child.png
+crossover_mask_parent*.png
+crossover_mask_child.png
+before_structural_mutation.png
+after_structural_mutation.png
+before_pixellevel_mutation.png
+after_pixellevel_mutation.png
+
+# Model artifacts
+*.pt
+*.pth
+*.pkl
+*.joblib
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
